@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Google Geocoding PHP SDK (Unofficial)</title>
+    
+    <meta charset="utf-8" />
+    
+    <style type="text/css">
+
+      * {
+        margin: 0;
+        padding: 0;  
+      }
+      
+      body {
+        font: 12px Arial, helvetica, sans-serif;
+        margin: 0px 20px 0px 200px;
+        padding: 10px 20px;
+        width: 700px;
+        border-left: 1px solid #999;
+      }
+      
+      #nav {
+        position: fixed;
+        top: 50px;
+        left: 0;
+      }
+      
+      h2, h3 {
+        margin-bottom: 10px; 
+      }
+
+      p {
+        margin-bottom: 10px;  
+      }
+      
+      ul {
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+      
+      li {
+        margin-left: 15px; 
+        margin-bottom: 2px; 
+      }
+      
+      li ul {
+        margin-bottom: 0px;  
+      }
+      
+      div.section {
+        border-bottom: 1px solid #999;
+        padding: 5px 10px;
+      }
+      
+      code {
+        background-color: #efefef;        
+      }
+      
+      code.block {
+        display: block;
+        white-space: pre;
+        border: 1px solid #AAA;
+        padding: 0px 10px;
+        margin: 10px 20px;
+        overflow: auto;
+      }
+      
+      p.insert {
+        border: 1px solid #41AF5A;
+        background-color: #A4EFB5;
+        padding: 10px 10px 10px 60px;
+        position: relative;
+      }
+      
+      p.insert span.attention {
+        border: 20px solid transparent;
+        border-bottom-color: #FFE800;
+        height: 0px;
+        width: 0px;
+        overflow: visible;
+        position: absolute;
+        left: 10px;
+        top: -13px;
+        padding: 0px;
+        font-weight: bold;
+        color: black;
+        line-height: 20px;
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+    <h1>Google Geocoding PHP SDK (Unofficial)</h1>
+    <ul id="nav">
+      <li><a href="#Introduction">Introduction</a></li>
+      <li>
+        <a href="#getting-started">Getting Started</a>
+        <ul>
+          <li><a href="#requirements">Requirements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#the-service">The Service</a>
+        <ul>
+          <li><a href="#geocoding">Geocoding</a></li>
+          <li><a href="#reverse-geocoding">Reverse Geocoding</a></li>
+          <li><a href="#service-errors">Service Errors</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#the-response">The Response</a>
+        <ul>
+          <li><a href="#inspecting-results">Inspecting Results</a></li>
+          <li><a href="#multiple-results">Multiple Results</a></li>
+        </ul>
+      </li>
+      <li><a href="#communicators">Communicators</a></li>
+    </ul>
+    
+    <div class="section">
+      <h2 id="introduction">Introduction</h2>
+      <p>
+        This is an unofficial PHP SDK for the <a href="http://code.google.com/apis/maps/documentation/geocoding/">Google Geocoding API (v3)</a>. 
+      </p>
+      <p>
+        Originally concepted and authored by <a href="mailto:peter.bailey@jwt.com?subject=Google%20Geocoding%20PHP%20SDK%20(Unofficial)">Peter Bailey</a> of <a href="http://www.jwt.com/">JWT</a>.
+      </p>
+      <p>
+        This is the user documentation. Go to the <a href="../api/index.html">API Documentation</a>.
+      </p>
+    </div>
+    
+    <div class="section">
+      <h2 id="getting-started">Getting Started</h2>
+      <p>
+        The first thing to know is that this SDK has not been written to handle file inclusions for you.
+        This was deliberately left out so developers using autoloaders can plug this in to their existing autoloding system.
+        If you don't use an autoloader, you will have to require the optoinal bootstrap file at <code>/sdk/bootstrap.php</code> <em>or</em> manually require the following files:
+      </p>
+      <ul>
+        <li><code>/sdk/GoogleGeocodeServiceV3.php</code></li>
+        <li><code>/sdk/GoogleGeocodeResponseV3.php</code></li>
+        <li><code>/sdk/exception/GoogleGeocodeException.php</code></li>
+        <li><code>/sdk/exception/GoogleGeocodeCommunicatorException.php</code></li>
+        <li><code>/sdk/communicator/GoogleServiceCommunicator.php</code></li>
+      </ul>
+      <p class="insert">
+        <span class="attention">!</span>
+        Note that <a href="#communicators">a communicator</a> is not included in this list, just the interface. This is because while you need a communicator for the SDK to function, you don't <em>have</em> to use one of the provided communicators. See the <a href="#communicators">section on communicators</a> for more details.
+      </p>
+      
+      <h3 id="requirements">Requirements</h3>
+      <ul>
+        <li>PHP 5.2.x or later</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2 id="the-service">The Service</h2>
+      <p>
+        The service itself is quite simple.
+        Basic instantiation takes a single line
+        <code class="block">
+// Create a service that will communicate to the API via cURL
+$service = new GoogleGeocodeServiceV3( new CurlCommunicator() );
+        </code>
+        
+        If you wish to alter some of the request defaults, that can be done at instantiation time, or post-instantiation
+        
+        <code class="block">
+// Setting French as the default language at instantiation time
+$service = new GoogleGeocodeServiceV3( 
+    new CurlCommunicator()
+  , null
+  , array( 'language' =&gt; 'fr' )
+);
+
+// Setting French as the default language at a later time
+$service-&gt;setRequestDefaults( array( 'language' =&gt; 'fr' ) )
+        </code>
+      </p>
+        
+      <h3 id="geocoding">Geocoding</h3>
+      <p>
+        Geocoding is simple.
+        Just supply an address to geocode
+        <code class="block">
+// Geocode Paris, France
+$response = $service-&gt;geocode( 'Paris, France' );
+        </code> 
+      </p>
+      <p class="insert">
+        <span class="attention">!</span>
+        <em>Remember: </em> an address doesn't have to be a street name and number; it can be any geographic name, in part or in full.
+      </p>
+      <p class="insert">
+        <span class="attention">!</span>
+        The XML response format is not currently supported.
+      </p>
+      
+      <h3 id="reverse-geocoding">Reverse Geocoding</h3>
+      <p>
+        Reverse geocoding isn't any more complicated.
+        Simply provide a latitude and longitude
+        <code class="block">
+// Find addresses near the center of the US ZIP code 90210
+$response = $service-&gt;reverseGeocode( 34.1346702, -118.4389877 );
+        </code>
+      </p>
+      <p class="insert">
+        <span class="attention">!</span>
+        The XML response format is not currently supported.
+      </p>
+      
+      <h3 id="service-errors">Service Errors</h3>
+      <p>
+        Error handling is accomplished via exceptions.
+        A typical try..catch block might look like so
+        <code class="block">
+try {
+  $response = $service-&gt;geocode( 'New York, NY' ); 
+}
+catch ( GoogleGeocodeCommunicatorException $e )
+{
+  // Something went wrong with the communicator
+}
+catch ( GoogleGeocodeException $e )
+{
+  // Something else went wrong
+}
+        </code>        
+      </p>
+    </div>
+    
+    <div class="section">
+      <h2 id="the-response">The Response</h2>
+      <p>
+        This is where things become a bit more complex.
+        The response from the API itself has many parts and variations on those parts.
+        Please refer to the <a href="http://code.google.com/apis/maps/documentation/geocoding/">official documentation</a> for more details.
+      </p>
+      <p>
+        The first thing to understand is that a response is an object comprised of only two properties: <code>status</code> and <code>results</code>, where <code>status</code> is the status of the entire response and <code>results</code> is an array of address matches.
+        With the exception of <a href="../api/GoogleGeocoding/Core/GoogleGeocodeResponseV3.html#getStatus" target="_blank">getStatus()</a>, all other getters apply to one of the elements in the <code>results</code> array.
+        Which result in the array that the getters retrieve from is dependent on the value of the internal cursor.
+        See <a href="#multiple-results">Multiple Results</a> for more information. 
+      </p>
+      
+      <h3 id="inspecting-results">Inspecting Results</h3>
+      <p>
+        Each result in the response has numerous properties, and there are getters for most of them.
+        <code class="block">
+$response = $service-&gt;geocode( 'Paris, France' );
+
+// Make sure we have a good result
+if ( $response-&gt;isValid() && $response-&gt;hasResults() )
+{
+  // Get the geographic center
+  $location = $response-&gt;getLocation();
+  echo "Paris, Frace is located at {$location-&gt;lat} latitude, {$location-&gt;lng} longitiude.&lt;br&gt;";
+
+  // Assert if Paris is a city
+  if ( $response-&gt;assertType( GoogleGeocodeResponseV3::ACT_LOCALITY ) )
+  {
+    echo 'Paris, France is a city.&lt;br&gt;';
+  } else {
+    echo 'Paris, France is not a city.&lt;br&gt;';
+  }
+
+  // Determine accuracy
+  echo 'Accuracy of result is ', $response-&gt;getLocationType();
+}
+        </code>
+      </p>
+      
+      <h3 id="multiple-results">Multiple Results</h3>
+      <p>
+        Most standard geocoding requests will return a single result in the response, so inspecting multiple results is something you won't have to do very often with geocoding.
+        The response class is designed to make this hands-off (the 0th result is used by default).
+        However, reverse geocoding will (almost?) always return multiple results per response. 
+      </p>
+      <p>
+        Iteration of the results operates on an internal cursor, rather than returning objects as you might typically use with a foreach loop. Because the response class implements <a href="http://www.php.net/manual/en/class.iterator.php">Iterator</a>, you can loop through the results like so:
+        <code class="block">
+while ( $response-&gt;valid() )
+{
+  // Do something with result
+  $response-&gt;next();
+}
+        </code>
+      </p>
+    </div>
+    
+    <div class="section">
+      <h2 id="communicators">Communicators</h2>
+      <p>
+        Communicators are nothing more than a class that enables the service to actually contact the API.
+        Because there are a multitude of ways to do so, this SDK doesn't lock you into using once specific method (i.e., cURL).
+        Instead, you simply write a class (or using any existing class you might have, like a <a href="https://github.com/shuber/curl">cURL wrapper</a>) that implements the <code>GoogleServiceCommunicator</code> interface, provide it to your instance of <a href="#the-service">the service</a>, and you're set.
+      </p>
+      <p>
+        This SDK comes packaged with two basic communicators: one based on <a href="http://www.php.net/file_get_contents">file_get_contents()</a>, and one based on <a href="http://www.php.net/curl">cURL</a>.
+        While these work quite well out-of-the-box, you are of course welcome to write your own.
+        For example, a communicator based on <a href="http://www.gnu.org/software/wget/">wget</a> might look like this
+        <code class="block">
+class WgetCommunicator implements GoogleServiceCommunicator
+{
+  public function requestUrl( $url )
+  {
+    ob_start();
+    system( "wget -qO- $url | less");
+    return ob_get_clean();
+  }
+}
+        </code>
+      </p>
+    </div>
+  </body>
+  
+</html>

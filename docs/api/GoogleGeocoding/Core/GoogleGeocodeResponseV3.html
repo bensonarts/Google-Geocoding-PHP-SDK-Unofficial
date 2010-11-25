@@ -1,0 +1,1875 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class GoogleGeocodeResponseV3</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class GoogleGeocodeResponseV3</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li>ArrayAccess (internal interface)</li><li>Iterator (internal interface)</li><li>Countable (internal interface)</li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A response class for Google's Geocoding API (V3)</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Peter Bailey &lt;<a href="mailto:peter.bailey@jwt.com">peter.bailey@jwt.com</a>&gt;</li>
+				<li><span class="field">see:</span> <a href="http://code.google.com/apis/maps/documentation/geocoding/">http://code.google.com/apis/maps/documentation/geocoding/</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_GoogleGeocodeResultV3.php.html">/GoogleGeocodeResultV3.php</a> (line <span class="field"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a12">12</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_ADMINISTRATIVE_AREA_LEVEL_1" title="details" class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_1</a> = 					<span class="var-type"> 'administrative_area_level_1'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_ADMINISTRATIVE_AREA_LEVEL_2" title="details" class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_2</a> = 					<span class="var-type"> 'administrative_area_level_2'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_ADMINISTRATIVE_AREA_LEVEL_3" title="details" class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_3</a> = 					<span class="var-type"> 'administrative_area_level_3'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_AIRPORT" title="details" class="const-name">ACT_AIRPORT</a> = 					<span class="var-type"> 'airport'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_COLLOQUIAL_AREA" title="details" class="const-name">ACT_COLLOQUIAL_AREA</a> = 					<span class="var-type"> 'colloquial_area'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_COUNTRY" title="details" class="const-name">ACT_COUNTRY</a> = 					<span class="var-type"> 'country'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_FLOOR" title="details" class="const-name">ACT_FLOOR</a> = 					<span class="var-type"> 'floor'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_INTERSECTION" title="details" class="const-name">ACT_INTERSECTION</a> = 					<span class="var-type"> 'intersection'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_LOCALITY" title="details" class="const-name">ACT_LOCALITY</a> = 					<span class="var-type"> 'locality'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_NATURAL_FEATURE" title="details" class="const-name">ACT_NATURAL_FEATURE</a> = 					<span class="var-type"> 'natural_feature'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_NEIGHBORHOOD" title="details" class="const-name">ACT_NEIGHBORHOOD</a> = 					<span class="var-type"> 'neighborhood'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_PARK" title="details" class="const-name">ACT_PARK</a> = 					<span class="var-type"> 'park'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_POINT_OF_INTEREST" title="details" class="const-name">ACT_POINT_OF_INTEREST</a> = 					<span class="var-type"> 'point_of_interest'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_POLITICAL" title="details" class="const-name">ACT_POLITICAL</a> = 					<span class="var-type"> 'political'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_POSTAL_CODE" title="details" class="const-name">ACT_POSTAL_CODE</a> = 					<span class="var-type"> 'postal_code'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_POST_BOX" title="details" class="const-name">ACT_POST_BOX</a> = 					<span class="var-type"> 'post_box'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_PREMISE" title="details" class="const-name">ACT_PREMISE</a> = 					<span class="var-type"> 'premise'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_ROOM" title="details" class="const-name">ACT_ROOM</a> = 					<span class="var-type"> 'room'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_ROUTE" title="details" class="const-name">ACT_ROUTE</a> = 					<span class="var-type"> 'route'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_STREET_ADDRESS" title="details" class="const-name">ACT_STREET_ADDRESS</a> = 					<span class="var-type"> 'street_address'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_STREET_NUMBER" title="details" class="const-name">ACT_STREET_NUMBER</a> = 					<span class="var-type"> 'street_number'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_SUBLOCALITY" title="details" class="const-name">ACT_SUBLOCALITY</a> = 					<span class="var-type"> 'sublocality'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ACT_SUBPREMISE" title="details" class="const-name">ACT_SUBPREMISE</a> = 					<span class="var-type"> 'subpremise'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LT_APPROXIMATE" title="details" class="const-name">LT_APPROXIMATE</a> = 					<span class="var-type"> 'APPROXIMATE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LT_GEOMETRIC_CENTER" title="details" class="const-name">LT_GEOMETRIC_CENTER</a> = 					<span class="var-type"> 'GEOMETRIC_CENTER'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LT_RANGE_INTERPOLATED" title="details" class="const-name">LT_RANGE_INTERPOLATED</a> = 					<span class="var-type"> 'RANGE_INTERPOLATED'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LT_ROOFTOP" title="details" class="const-name">LT_ROOFTOP</a> = 					<span class="var-type"> 'ROOFTOP'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#NAME_LONG" title="details" class="const-name">NAME_LONG</a> = 					<span class="var-type"> &quot;long_name&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#NAME_SHORT" title="details" class="const-name">NAME_SHORT</a> = 					<span class="var-type"> &quot;short_name&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#STATUS_INVALID_REQUEST" title="details" class="const-name">STATUS_INVALID_REQUEST</a> = 					<span class="var-type"> &quot;INVALID_REQUEST&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#STATUS_OK" title="details" class="const-name">STATUS_OK</a> = 					<span class="var-type"> &quot;OK&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#STATUS_OVER_QUERY_LIMIT" title="details" class="const-name">STATUS_OVER_QUERY_LIMIT</a> = 					<span class="var-type"> &quot;OVER_QUERY_LIMIT&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#STATUS_REQUEST_DENIED" title="details" class="const-name">STATUS_REQUEST_DENIED</a> = 					<span class="var-type"> &quot;REQUEST_DENIED&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#STATUS_ZERO_RESULTS" title="details" class="const-name">STATUS_ZERO_RESULTS</a> = 					<span class="var-type"> &quot;ZERO_RESULTS&quot;</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					static <span class="var-type">array</span>
+					<a href="#$invalidStatuses" title="details" class="var-name">$invalidStatuses</a>
+				</div>
+																																<div class="var-title">
+					static <span class="var-type">array</span>
+					<a href="#$validStatuses" title="details" class="var-name">$validStatuses</a>
+				</div>
+																												<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$rawResponse" title="details" class="var-name">$rawResponse</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">stdClass</span>
+					<a href="#$response" title="details" class="var-name">$response</a>
+				</div>
+																			</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#assertType" title="details" class="method-name">assertType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#count" title="details" class="method-name">count</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">stdClass</span>
+										<a href="#current" title="details" class="method-name">current</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">stdClass|null</span>
+										<a href="#getAddressComponent" title="details" class="method-name">getAddressComponent</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$componentType</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string|null</span>
+										<a href="#getAddressComponentName" title="details" class="method-name">getAddressComponentName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">self::NAME_LONG</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">stdClass</span>
+										<a href="#getBounds" title="details" class="method-name">getBounds</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getFormattedAddress" title="details" class="method-name">getFormattedAddress</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">stdClass</span>
+										<a href="#getLocation" title="details" class="method-name">getLocation</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLocationType" title="details" class="method-name">getLocationType</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getRawResponse" title="details" class="method-name">getRawResponse</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">stdClass</span>
+										<a href="#getResponse" title="details" class="method-name">getResponse</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getStatus" title="details" class="method-name">getStatus</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getTypes" title="details" class="method-name">getTypes</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">stdClass</span>
+										<a href="#getViewport" title="details" class="method-name">getViewport</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#hasBounds" title="details" class="method-name">hasBounds</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#hasResults" title="details" class="method-name">hasResults</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isInvalid" title="details" class="method-name">isInvalid</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isValid" title="details" class="method-name">isValid</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#key" title="details" class="method-name">key</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#next" title="details" class="method-name">next</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#offsetExists" title="details" class="method-name">offsetExists</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">stdClass|null</span>
+										<a href="#offsetGet" title="details" class="method-name">offsetGet</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#offsetSet" title="details" class="method-name">offsetSet</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#offsetUnset" title="details" class="method-name">offsetUnset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#rewind" title="details" class="method-name">rewind</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">GoogleGeocodeResponseV3</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$response</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$responseFormat</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#valid" title="details" class="method-name">valid</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$invalidStatuses" id="$invalidStatuses"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$invalidStatuses</span>
+			 = <span class="var-default">array(<br />      self::STATUS_OVER_QUERY_LIMIT<br />    , self::STATUS_REQUEST_DENIED<br />    , self::STATUS_INVALID_REQUEST<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a84">84</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Statuses which are considered invalid</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$validStatuses" id="$validStatuses"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$validStatuses</span>
+			 = <span class="var-default">array(<br />      self::STATUS_OK<br />    , self::STATUS_ZERO_RESULTS<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a74">74</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Statuses which are considered valid</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$rawResponse" id="$rawResponse"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$rawResponse</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The un-parsed response</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$response" id="$response"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">stdClass</span>
+			<span class="var-name">$response</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a60">60</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The parsed response</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodassertType" id="assertType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">assertType</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a201">201</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if the given type is available in the address components  of the result at the current cursor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			assertType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount" id="count"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">count</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a424">424</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Count the number of results in the response</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.countable.php">http://www.php.net/manual/en/class.countable.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			count
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Countable::count</dt>
+					</dl>
+			
+	</div>
+<a name="methodcurrent" id="current"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">current</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a373">373</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the result at the current cursor</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.iterator.php">http://www.php.net/manual/en/class.iterator.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			current
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::current</dt>
+					</dl>
+			
+	</div>
+<a name="methodgetAddressComponent" id="getAddressComponent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAddressComponent</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a127">127</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the requested address component, if it exists</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass|null</span>
+		<span class="method-name">
+			getAddressComponent
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$componentType</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$componentType</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAddressComponentName" id="getAddressComponentName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAddressComponentName</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the name of an address component for the result at the  current index</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|null</span>
+		<span class="method-name">
+			getAddressComponentName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">self::NAME_LONG</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: Which address component to read</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$size</span><span class="var-description">: Which name length to return</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBounds" id="getBounds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getBounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a276">276</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the bounds object from the result at the current cursor</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> { &quot;southwest&quot;: {&quot;lat&quot;: FLOAT, &quot;lng&quot;: FLOAT}                   , &quot;northeast&quot;: {&quot;lat&quot;: FLOAT, &quot;lng&quot;: FLOAT}}</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			getBounds
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFormattedAddress" id="getFormattedAddress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getFormattedAddress</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a244">244</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the formatted address of the result at the current cursor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getFormattedAddress
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLocation" id="getLocation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLocation</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a254">254</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the location object from the result at the current cursor</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> {&quot;lat&quot;: FLOAT, &quot;lng&quot;: FLOAT}</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			getLocation
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLocationType" id="getLocationType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLocationType</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a295">295</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLocationType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRawResponse" id="getRawResponse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRawResponse</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a224">224</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the response pre-parsing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRawResponse
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetResponse" id="getResponse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getResponse</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a214">214</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the parsed response</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			getResponse
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetStatus" id="getStatus"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getStatus</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a234">234</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the response's status</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getStatus
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTypes" id="getTypes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTypes</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getTypes
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetViewport" id="getViewport"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getViewport</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a265">265</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the viewport object from the result at the current cursor</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> { &quot;southwest&quot;: {&quot;lat&quot;: FLOAT, &quot;lng&quot;: FLOAT}                   , &quot;northeast&quot;: {&quot;lat&quot;: FLOAT, &quot;lng&quot;: FLOAT}}</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			getViewport
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhasBounds" id="hasBounds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">hasBounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a290">290</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if the result at the current cursor includes the optional  bounds property</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasBounds
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhasResults" id="hasResults"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">hasResults</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a144">144</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check the response for results</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasResults
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisInvalid" id="isInvalid"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isInvalid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a164">164</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check the response for invalidity</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isInvalid
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisValid" id="isValid"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isValid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a154">154</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check the response for validity</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isValid
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodkey" id="key"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">key</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a385">385</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the cursor</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.iterator.php">http://www.php.net/manual/en/class.iterator.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			key
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::key</dt>
+					</dl>
+			
+	</div>
+<a name="methodnext" id="next"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">next</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a395">395</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Advance the cursor</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.iterator.php">http://www.php.net/manual/en/class.iterator.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			next
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::next</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetExists" id="offsetExists"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">offsetExists</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a322">322</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if a result exists at the given index</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			offsetExists
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetExists</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetGet" id="offsetGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">offsetGet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a348">348</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the result at the given index</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass|null</span>
+		<span class="method-name">
+			offsetGet
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetGet</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetSet" id="offsetSet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">offsetSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a308">308</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Overwrite the result at the given index</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			offsetSet
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetSet</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetUnset" id="offsetUnset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">offsetUnset</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a334">334</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete the result at the given index</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			offsetUnset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetUnset</dt>
+					</dl>
+			
+	</div>
+<a name="methodrewind" id="rewind"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">rewind</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a361">361</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reset the cursor</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.iterator.php">http://www.php.net/manual/en/class.iterator.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rewind
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::rewind</dt>
+					</dl>
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a105">105</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> GoogleGeocodeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">GoogleGeocodeResponseV3</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$response</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$responseFormat</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$response</span><span class="var-description">: Raw response from API</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$responseFormat</span><span class="var-description">: Format that response is in</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalid" id="valid"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">valid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a407">407</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if the cursor is valid</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.iterator.php">http://www.php.net/manual/en/class.iterator.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			valid
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::valid</dt>
+					</dl>
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constACT_ADMINISTRATIVE_AREA_LEVEL_1" id="ACT_ADMINISTRATIVE_AREA_LEVEL_1"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_1</span>
+			 = <span class="const-default"> 'administrative_area_level_1'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_ADMINISTRATIVE_AREA_LEVEL_2" id="ACT_ADMINISTRATIVE_AREA_LEVEL_2"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_2</span>
+			 = <span class="const-default"> 'administrative_area_level_2'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_ADMINISTRATIVE_AREA_LEVEL_3" id="ACT_ADMINISTRATIVE_AREA_LEVEL_3"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_3</span>
+			 = <span class="const-default"> 'administrative_area_level_3'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_AIRPORT" id="ACT_AIRPORT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_AIRPORT</span>
+			 = <span class="const-default"> 'airport'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_COLLOQUIAL_AREA" id="ACT_COLLOQUIAL_AREA"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_COLLOQUIAL_AREA</span>
+			 = <span class="const-default"> 'colloquial_area'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_COUNTRY" id="ACT_COUNTRY"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_COUNTRY</span>
+			 = <span class="const-default"> 'country'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_FLOOR" id="ACT_FLOOR"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_FLOOR</span>
+			 = <span class="const-default"> 'floor'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_INTERSECTION" id="ACT_INTERSECTION"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_INTERSECTION</span>
+			 = <span class="const-default"> 'intersection'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a24">24</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_LOCALITY" id="ACT_LOCALITY"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_LOCALITY</span>
+			 = <span class="const-default"> 'locality'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_NATURAL_FEATURE" id="ACT_NATURAL_FEATURE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_NATURAL_FEATURE</span>
+			 = <span class="const-default"> 'natural_feature'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_NEIGHBORHOOD" id="ACT_NEIGHBORHOOD"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_NEIGHBORHOOD</span>
+			 = <span class="const-default"> 'neighborhood'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_PARK" id="ACT_PARK"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_PARK</span>
+			 = <span class="const-default"> 'park'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_POINT_OF_INTEREST" id="ACT_POINT_OF_INTEREST"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_POINT_OF_INTEREST</span>
+			 = <span class="const-default"> 'point_of_interest'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_POLITICAL" id="ACT_POLITICAL"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_POLITICAL</span>
+			 = <span class="const-default"> 'political'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a25">25</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_POSTAL_CODE" id="ACT_POSTAL_CODE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_POSTAL_CODE</span>
+			 = <span class="const-default"> 'postal_code'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_POST_BOX" id="ACT_POST_BOX"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_POST_BOX</span>
+			 = <span class="const-default"> 'post_box'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_PREMISE" id="ACT_PREMISE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_PREMISE</span>
+			 = <span class="const-default"> 'premise'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_ROOM" id="ACT_ROOM"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_ROOM</span>
+			 = <span class="const-default"> 'room'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_ROUTE" id="ACT_ROUTE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_ROUTE</span>
+			 = <span class="const-default"> 'route'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a23">23</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_STREET_ADDRESS" id="ACT_STREET_ADDRESS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_STREET_ADDRESS</span>
+			 = <span class="const-default"> 'street_address'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a22">22</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_STREET_NUMBER" id="ACT_STREET_NUMBER"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_STREET_NUMBER</span>
+			 = <span class="const-default"> 'street_number'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_SUBLOCALITY" id="ACT_SUBLOCALITY"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_SUBLOCALITY</span>
+			 = <span class="const-default"> 'sublocality'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constACT_SUBPREMISE" id="ACT_SUBPREMISE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ACT_SUBPREMISE</span>
+			 = <span class="const-default"> 'subpremise'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLT_APPROXIMATE" id="LT_APPROXIMATE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LT_APPROXIMATE</span>
+			 = <span class="const-default"> 'APPROXIMATE'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLT_GEOMETRIC_CENTER" id="LT_GEOMETRIC_CENTER"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LT_GEOMETRIC_CENTER</span>
+			 = <span class="const-default"> 'GEOMETRIC_CENTER'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLT_RANGE_INTERPOLATED" id="LT_RANGE_INTERPOLATED"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LT_RANGE_INTERPOLATED</span>
+			 = <span class="const-default"> 'RANGE_INTERPOLATED'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLT_ROOFTOP" id="LT_ROOFTOP"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LT_ROOFTOP</span>
+			 = <span class="const-default"> 'ROOFTOP'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constNAME_LONG" id="NAME_LONG"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">NAME_LONG</span>
+			 = <span class="const-default"> &quot;long_name&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constNAME_SHORT" id="NAME_SHORT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">NAME_SHORT</span>
+			 = <span class="const-default"> &quot;short_name&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSTATUS_INVALID_REQUEST" id="STATUS_INVALID_REQUEST"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STATUS_INVALID_REQUEST</span>
+			 = <span class="const-default"> &quot;INVALID_REQUEST&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a19">19</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSTATUS_OK" id="STATUS_OK"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STATUS_OK</span>
+			 = <span class="const-default"> &quot;OK&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a15">15</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSTATUS_OVER_QUERY_LIMIT" id="STATUS_OVER_QUERY_LIMIT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STATUS_OVER_QUERY_LIMIT</span>
+			 = <span class="const-default"> &quot;OVER_QUERY_LIMIT&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a17">17</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSTATUS_REQUEST_DENIED" id="STATUS_REQUEST_DENIED"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STATUS_REQUEST_DENIED</span>
+			 = <span class="const-default"> &quot;REQUEST_DENIED&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a18">18</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSTATUS_ZERO_RESULTS" id="STATUS_ZERO_RESULTS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STATUS_ZERO_RESULTS</span>
+			 = <span class="const-default"> &quot;ZERO_RESULTS&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a16">16</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 07 Dec 2010 11:54:01 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>
