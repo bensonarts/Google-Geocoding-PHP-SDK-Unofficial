@@ -35,7 +35,7 @@
 				<li><span class="field">see:</span> <a href="http://code.google.com/apis/maps/documentation/geocoding/">http://code.google.com/apis/maps/documentation/geocoding/</a></li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_GoogleGeocodeResultV3.php.html">/GoogleGeocodeResultV3.php</a> (line <span class="field"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a12">12</a></span>)
+			Located in <a class="field" href="_GoogleGeocodeResponseV3.php.html">/GoogleGeocodeResponseV3.php</a> (line <span class="field"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a35">35</a></span>)
 		</p>
 		
 				
@@ -324,7 +324,7 @@
 										()
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">string</span>
 										<a href="#getLocationType" title="details" class="method-name">getLocationType</a>
 										()
 									</div>
@@ -344,7 +344,7 @@
 										()
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">array</span>
 										<a href="#getTypes" title="details" class="method-name">getTypes</a>
 										()
 									</div>
@@ -444,7 +444,7 @@
 		<span class="var-title">
 			static <span class="var-type">array</span>
 			<span class="var-name">$invalidStatuses</span>
-			 = <span class="var-default">array(<br />      self::STATUS_OVER_QUERY_LIMIT<br />    , self::STATUS_REQUEST_DENIED<br />    , self::STATUS_INVALID_REQUEST<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a84">84</a></span>)
+			 = <span class="var-default">array(<br />      self::STATUS_OVER_QUERY_LIMIT<br />    , self::STATUS_REQUEST_DENIED<br />    , self::STATUS_INVALID_REQUEST<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a107">107</a></span>)
 		</span>
 	</div>
 
@@ -466,7 +466,7 @@
 		<span class="var-title">
 			static <span class="var-type">array</span>
 			<span class="var-name">$validStatuses</span>
-			 = <span class="var-default">array(<br />      self::STATUS_OK<br />    , self::STATUS_ZERO_RESULTS<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a74">74</a></span>)
+			 = <span class="var-default">array(<br />      self::STATUS_OK<br />    , self::STATUS_ZERO_RESULTS<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a97">97</a></span>)
 		</span>
 	</div>
 
@@ -488,7 +488,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$rawResponse</span>
-						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a67">67</a></span>)
+						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a90">90</a></span>)
 		</span>
 	</div>
 
@@ -510,7 +510,7 @@
 		<span class="var-title">
 			<span class="var-type">stdClass</span>
 			<span class="var-name">$response</span>
-						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a60">60</a></span>)
+						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a83">83</a></span>)
 		</span>
 	</div>
 
@@ -547,11 +547,11 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">assertType</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a201">201</a></span>)
+		<span class="method-title">assertType</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a228">228</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Determine if the given type is available in the address components  of the result at the current cursor</p>
+<p class="short-description">Determine if the result at the current cursor is of the given type</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -576,7 +576,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">count</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a424">424</a></span>)
+		<span class="method-title">count</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a456">456</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -606,7 +606,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">current</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a373">373</a></span>)
+		<span class="method-title">current</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a405">405</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -636,7 +636,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getAddressComponent</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a127">127</a></span>)
+		<span class="method-title">getAddressComponent</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a150">150</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -665,11 +665,11 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getAddressComponentName</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a183">183</a></span>)
+		<span class="method-title">getAddressComponentName</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a211">211</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Obtain the name of an address component for the result at the  current index</p>
+<p class="short-description">Obtain the name of an address component for the result at the  current cursor</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -697,7 +697,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getBounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a276">276</a></span>)
+		<span class="method-title">getBounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a303">303</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -722,7 +722,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getFormattedAddress</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a244">244</a></span>)
+		<span class="method-title">getFormattedAddress</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a271">271</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -746,7 +746,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getLocation</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a254">254</a></span>)
+		<span class="method-title">getLocation</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a281">281</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -771,16 +771,17 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getLocationType</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a295">295</a></span>)
+		<span class="method-title">getLocationType</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a327">327</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obtain the location type of the result at the current cursor</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">string</span>
 		<span class="method-name">
 			getLocationType
 		</span>
@@ -794,7 +795,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getRawResponse</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a224">224</a></span>)
+		<span class="method-title">getRawResponse</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a251">251</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -818,7 +819,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getResponse</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a214">214</a></span>)
+		<span class="method-title">getResponse</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a241">241</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -842,7 +843,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getStatus</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a234">234</a></span>)
+		<span class="method-title">getStatus</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a261">261</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -866,16 +867,17 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getTypes</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a169">169</a></span>)
+		<span class="method-title">getTypes</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a197">197</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Obatin the types for the result at the current cursor</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">array</span>
 		<span class="method-name">
 			getTypes
 		</span>
@@ -889,7 +891,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getViewport</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a265">265</a></span>)
+		<span class="method-title">getViewport</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a292">292</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -914,7 +916,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">hasBounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a290">290</a></span>)
+		<span class="method-title">hasBounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a317">317</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -938,7 +940,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">hasResults</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a144">144</a></span>)
+		<span class="method-title">hasResults</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a167">167</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -962,7 +964,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isInvalid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a164">164</a></span>)
+		<span class="method-title">isInvalid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a187">187</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -986,7 +988,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">isValid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a154">154</a></span>)
+		<span class="method-title">isValid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a177">177</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1010,7 +1012,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">key</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a385">385</a></span>)
+		<span class="method-title">key</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a417">417</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1040,7 +1042,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">next</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a395">395</a></span>)
+		<span class="method-title">next</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a427">427</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1070,7 +1072,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetExists</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a322">322</a></span>)
+		<span class="method-title">offsetExists</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a354">354</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1105,7 +1107,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetGet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a348">348</a></span>)
+		<span class="method-title">offsetGet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a380">380</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1140,7 +1142,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a308">308</a></span>)
+		<span class="method-title">offsetSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a340">340</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1178,7 +1180,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetUnset</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a334">334</a></span>)
+		<span class="method-title">offsetUnset</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a366">366</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1213,7 +1215,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">rewind</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a361">361</a></span>)
+		<span class="method-title">rewind</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a393">393</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1243,7 +1245,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a105">105</a></span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a128">128</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1276,7 +1278,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">valid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a407">407</a></span>)
+		<span class="method-title">valid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a439">439</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1328,7 +1330,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_1</span>
 			 = <span class="const-default"> 'administrative_area_level_1'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a27">27</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a50">50</a></span>)
 		</span>
 	</div>
 
@@ -1344,7 +1346,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_2</span>
 			 = <span class="const-default"> 'administrative_area_level_2'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a28">28</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a51">51</a></span>)
 		</span>
 	</div>
 
@@ -1360,7 +1362,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_ADMINISTRATIVE_AREA_LEVEL_3</span>
 			 = <span class="const-default"> 'administrative_area_level_3'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a29">29</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a52">52</a></span>)
 		</span>
 	</div>
 
@@ -1376,7 +1378,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_AIRPORT</span>
 			 = <span class="const-default"> 'airport'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a38">38</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a61">61</a></span>)
 		</span>
 	</div>
 
@@ -1392,7 +1394,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_COLLOQUIAL_AREA</span>
 			 = <span class="const-default"> 'colloquial_area'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a30">30</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a53">53</a></span>)
 		</span>
 	</div>
 
@@ -1408,7 +1410,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_COUNTRY</span>
 			 = <span class="const-default"> 'country'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a26">26</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a49">49</a></span>)
 		</span>
 	</div>
 
@@ -1424,7 +1426,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_FLOOR</span>
 			 = <span class="const-default"> 'floor'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a43">43</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a66">66</a></span>)
 		</span>
 	</div>
 
@@ -1440,7 +1442,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_INTERSECTION</span>
 			 = <span class="const-default"> 'intersection'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a24">24</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a47">47</a></span>)
 		</span>
 	</div>
 
@@ -1456,7 +1458,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_LOCALITY</span>
 			 = <span class="const-default"> 'locality'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a31">31</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a54">54</a></span>)
 		</span>
 	</div>
 
@@ -1472,7 +1474,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_NATURAL_FEATURE</span>
 			 = <span class="const-default"> 'natural_feature'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a37">37</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a60">60</a></span>)
 		</span>
 	</div>
 
@@ -1488,7 +1490,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_NEIGHBORHOOD</span>
 			 = <span class="const-default"> 'neighborhood'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a33">33</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a56">56</a></span>)
 		</span>
 	</div>
 
@@ -1504,7 +1506,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_PARK</span>
 			 = <span class="const-default"> 'park'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a39">39</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a62">62</a></span>)
 		</span>
 	</div>
 
@@ -1520,7 +1522,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_POINT_OF_INTEREST</span>
 			 = <span class="const-default"> 'point_of_interest'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a40">40</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a63">63</a></span>)
 		</span>
 	</div>
 
@@ -1536,7 +1538,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_POLITICAL</span>
 			 = <span class="const-default"> 'political'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a25">25</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a48">48</a></span>)
 		</span>
 	</div>
 
@@ -1552,7 +1554,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_POSTAL_CODE</span>
 			 = <span class="const-default"> 'postal_code'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a36">36</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a59">59</a></span>)
 		</span>
 	</div>
 
@@ -1568,7 +1570,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_POST_BOX</span>
 			 = <span class="const-default"> 'post_box'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a41">41</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a64">64</a></span>)
 		</span>
 	</div>
 
@@ -1584,7 +1586,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_PREMISE</span>
 			 = <span class="const-default"> 'premise'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a34">34</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a57">57</a></span>)
 		</span>
 	</div>
 
@@ -1600,7 +1602,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_ROOM</span>
 			 = <span class="const-default"> 'room'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a44">44</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a67">67</a></span>)
 		</span>
 	</div>
 
@@ -1616,7 +1618,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_ROUTE</span>
 			 = <span class="const-default"> 'route'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a23">23</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a46">46</a></span>)
 		</span>
 	</div>
 
@@ -1632,7 +1634,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_STREET_ADDRESS</span>
 			 = <span class="const-default"> 'street_address'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a22">22</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a45">45</a></span>)
 		</span>
 	</div>
 
@@ -1648,7 +1650,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_STREET_NUMBER</span>
 			 = <span class="const-default"> 'street_number'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a42">42</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a65">65</a></span>)
 		</span>
 	</div>
 
@@ -1664,7 +1666,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_SUBLOCALITY</span>
 			 = <span class="const-default"> 'sublocality'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a32">32</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a55">55</a></span>)
 		</span>
 	</div>
 
@@ -1680,7 +1682,7 @@
 		<span class="const-title">
 			<span class="const-name">ACT_SUBPREMISE</span>
 			 = <span class="const-default"> 'subpremise'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a35">35</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a58">58</a></span>)
 		</span>
 	</div>
 
@@ -1696,7 +1698,7 @@
 		<span class="const-title">
 			<span class="const-name">LT_APPROXIMATE</span>
 			 = <span class="const-default"> 'APPROXIMATE'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a50">50</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a73">73</a></span>)
 		</span>
 	</div>
 
@@ -1712,7 +1714,7 @@
 		<span class="const-title">
 			<span class="const-name">LT_GEOMETRIC_CENTER</span>
 			 = <span class="const-default"> 'GEOMETRIC_CENTER'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a49">49</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a72">72</a></span>)
 		</span>
 	</div>
 
@@ -1728,7 +1730,7 @@
 		<span class="const-title">
 			<span class="const-name">LT_RANGE_INTERPOLATED</span>
 			 = <span class="const-default"> 'RANGE_INTERPOLATED'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a48">48</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a71">71</a></span>)
 		</span>
 	</div>
 
@@ -1744,7 +1746,7 @@
 		<span class="const-title">
 			<span class="const-name">LT_ROOFTOP</span>
 			 = <span class="const-default"> 'ROOFTOP'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a47">47</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a70">70</a></span>)
 		</span>
 	</div>
 
@@ -1760,7 +1762,7 @@
 		<span class="const-title">
 			<span class="const-name">NAME_LONG</span>
 			 = <span class="const-default"> &quot;long_name&quot;</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a53">53</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a76">76</a></span>)
 		</span>
 	</div>
 
@@ -1776,7 +1778,7 @@
 		<span class="const-title">
 			<span class="const-name">NAME_SHORT</span>
 			 = <span class="const-default"> &quot;short_name&quot;</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a52">52</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a75">75</a></span>)
 		</span>
 	</div>
 
@@ -1792,7 +1794,7 @@
 		<span class="const-title">
 			<span class="const-name">STATUS_INVALID_REQUEST</span>
 			 = <span class="const-default"> &quot;INVALID_REQUEST&quot;</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a19">19</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a42">42</a></span>)
 		</span>
 	</div>
 
@@ -1808,7 +1810,7 @@
 		<span class="const-title">
 			<span class="const-name">STATUS_OK</span>
 			 = <span class="const-default"> &quot;OK&quot;</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a15">15</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a38">38</a></span>)
 		</span>
 	</div>
 
@@ -1824,7 +1826,7 @@
 		<span class="const-title">
 			<span class="const-name">STATUS_OVER_QUERY_LIMIT</span>
 			 = <span class="const-default"> &quot;OVER_QUERY_LIMIT&quot;</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a17">17</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a40">40</a></span>)
 		</span>
 	</div>
 
@@ -1840,7 +1842,7 @@
 		<span class="const-title">
 			<span class="const-name">STATUS_REQUEST_DENIED</span>
 			 = <span class="const-default"> &quot;REQUEST_DENIED&quot;</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a18">18</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a41">41</a></span>)
 		</span>
 	</div>
 
@@ -1856,7 +1858,7 @@
 		<span class="const-title">
 			<span class="const-name">STATUS_ZERO_RESULTS</span>
 			 = <span class="const-default"> &quot;ZERO_RESULTS&quot;</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResultV3.php.html#a16">16</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a39">39</a></span>)
 		</span>
 	</div>
 
@@ -1869,7 +1871,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 07 Dec 2010 11:54:01 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Thu, 06 Jan 2011 13:40:43 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</div></body>
 </html>

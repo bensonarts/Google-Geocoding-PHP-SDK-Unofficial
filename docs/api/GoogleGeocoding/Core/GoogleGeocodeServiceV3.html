@@ -30,7 +30,7 @@
 				<li><span class="field">see:</span> <a href="http://code.google.com/apis/maps/documentation/geocoding/">http://code.google.com/apis/maps/documentation/geocoding/</a></li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_GoogleGeocodeServiceV3.php.html">/GoogleGeocodeServiceV3.php</a> (line <span class="field"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a13">13</a></span>)
+			Located in <a class="field" href="_GoogleGeocodeServiceV3.php.html">/GoogleGeocodeServiceV3.php</a> (line <span class="field"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a35">35</a></span>)
 		</p>
 		
 				
@@ -55,6 +55,11 @@
 					</div>
 		<div class="info-box-body">
 			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#DEFAULT_RESPONSE_CLASS" title="details" class="const-name">DEFAULT_RESPONSE_CLASS</a> = 					<span class="var-type"> 'GoogleGeocodeResponseV3'</span>
+
+				</div>
 								<div class="const-title">
 					<img src="../../media/images/Constant.png" alt=" " />
 					<a href="#FORMAT_JSON" title="details" class="const-name">FORMAT_JSON</a> = 					<span class="var-type"> 'json'</span>
@@ -88,7 +93,7 @@
 					</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																								<div class="var-title">
+																																																<div class="var-title">
 					<span class="var-type">string</span>
 					<a href="#$apiKey" title="details" class="var-name">$apiKey</a>
 				</div>
@@ -99,6 +104,10 @@
 																<div class="var-title">
 					<span class="var-type">array</span>
 					<a href="#$requestDefaults" title="details" class="var-name">$requestDefaults</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$responseClass" title="details" class="var-name">$responseClass</a>
 				</div>
 											</div>
 		</div>
@@ -118,7 +127,7 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																												
+																																																																				
 												<div class="method-definition">
 											<span class="method-result">GoogleGeocodeServiceV3</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
@@ -154,6 +163,11 @@
 										<a href="#setRequestDefaults" title="details" class="method-name">setRequestDefaults</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$defaults</span>)
 									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setResponseClass" title="details" class="method-name">setResponseClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$className</span>)
+									</div>
 								</div>
 		</div>
 	</div>		
@@ -180,7 +194,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$apiKey</span>
-						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a24">24</a></span>)
+						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a47">47</a></span>)
 		</span>
 	</div>
 
@@ -202,12 +216,12 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../../GoogleGeocoding/Communicator/GoogleServiceCommunicator.html">GoogleServiceCommunicator</a></span>
 			<span class="var-name">$communicator</span>
-						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a31">31</a></span>)
+						(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a54">54</a></span>)
 		</span>
 	</div>
 
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">How this services will communicate with the API</p>
+<p class="short-description">How this service will communicate with the API</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> protected</li>
 			</ul>
@@ -224,12 +238,34 @@
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$requestDefaults</span>
-			 = <span class="var-default">array(<br />      'language' =&gt; 'en'<br />    , 'sensor'   =&gt; 'false'<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a38">38</a></span>)
+			 = <span class="var-default">array(<br />      'language' =&gt; 'en'<br />    , 'sensor'   =&gt; 'false'<br />  )</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a61">61</a></span>)
 		</span>
 	</div>
 
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Standard defaults for all requests</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$responseClass" id="$responseClass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$responseClass</span>
+			 = <span class="var-default"> self::DEFAULT_RESPONSE_CLASS</span>			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a71">71</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The class to return geocoding requests as</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> protected</li>
 			</ul>
@@ -258,10 +294,10 @@
 			<A NAME='method_detail'></A>
 
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a50">50</a></span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a80">80</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -293,10 +329,10 @@
 			
 	</div>
 <a name="methodbuildUrl" id="buildUrl"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">buildUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a140">140</a></span>)
+		<span class="method-title">buildUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a195">195</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -325,10 +361,10 @@
 			
 	</div>
 <a name="methodgenerateReverseUrl" id="generateReverseUrl"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">generateReverseUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a125">125</a></span>)
+		<span class="method-title">generateReverseUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a180">180</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -360,10 +396,10 @@
 			
 	</div>
 <a name="methodgenerateUrl" id="generateUrl"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">generateUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a109">109</a></span>)
+		<span class="method-title">generateUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a164">164</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -392,10 +428,10 @@
 			
 	</div>
 <a name="methodgeocode" id="geocode"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">geocode</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a78">78</a></span>)
+		<span class="method-title">geocode</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a133">133</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -424,10 +460,10 @@
 			
 	</div>
 <a name="methodreverseGeocode" id="reverseGeocode"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">reverseGeocode</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a94">94</a></span>)
+		<span class="method-title">reverseGeocode</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a149">149</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -459,10 +495,10 @@
 			
 	</div>
 <a name="methodsetRequestDefaults" id="setRequestDefaults"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">setRequestDefaults</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a65">65</a></span>)
+		<span class="method-title">setRequestDefaults</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a95">95</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -487,6 +523,36 @@
 		
 			
 	</div>
+<a name="methodsetResponseClass" id="setResponseClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setResponseClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a107">107</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the response class</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> GoogleGeocodeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setResponseClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$className</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$className</span><span class="var-description">: Class that inherits from GoogleGeocodeResponseV3</span>			</li>
+				</ul>
+		
+			
+	</div>
 						
 		</div>
 	</div>
@@ -505,15 +571,31 @@
 							
 					</div>
 		<div class="info-box-body">
-			<a name="constFORMAT_JSON" id="FORMAT_JSON"><!-- --></A>
+			<a name="constDEFAULT_RESPONSE_CLASS" id="DEFAULT_RESPONSE_CLASS"><!-- --></A>
 <div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DEFAULT_RESPONSE_CLASS</span>
+			 = <span class="const-default"> 'GoogleGeocodeResponseV3'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constFORMAT_JSON" id="FORMAT_JSON"><!-- --></A>
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="const-title">
 			<span class="const-name">FORMAT_JSON</span>
 			 = <span class="const-default"> 'json'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a16">16</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a39">39</a></span>)
 		</span>
 	</div>
 
@@ -522,14 +604,14 @@
 	
 </div>
 <a name="constFORMAT_XML" id="FORMAT_XML"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="const-title">
 			<span class="const-name">FORMAT_XML</span>
 			 = <span class="const-default"> 'xml'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a17">17</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a40">40</a></span>)
 		</span>
 	</div>
 
@@ -538,14 +620,14 @@
 	
 </div>
 <a name="constSERVICE_URL" id="SERVICE_URL"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="const-title">
 			<span class="const-name">SERVICE_URL</span>
 			 = <span class="const-default"> 'http://maps.googleapis.com/maps/api/geocode/'</span>
-			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a15">15</a></span>)
+			(line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a37">37</a></span>)
 		</span>
 	</div>
 
@@ -558,7 +640,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 07 Dec 2010 11:54:01 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Thu, 06 Jan 2011 13:40:44 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</div></body>
 </html>
