@@ -204,6 +204,72 @@ class GoogleGeocodeServiceV3Test extends PHPUnit_Framework_TestCase
       );
     }
   }
+
+  public function testRegionBiasing()
+  {
+    $location = 'Toledo';
+    $region   = 'es';
+
+    $params = array(
+        'language' => 'en'
+      , 'sensor'   => 'false'
+    );
+    $format   = 'json';
+    $params = array_merge( $params, array( 'region' => $region ) );
+    $params = array_merge( $params, array( 'address' => $location ) );
+
+    $this->service->biasRegion( $region );
+
+    $this->assertEquals(
+        "http://maps.googleapis.com/maps/api/geocode/$format?" . http_build_query( $params, '', '&' )
+      , $this->service->generateUrl( $location, $format )
+      , 'URLs did not match'
+    );
+  }
+
+  public function testViewportBiasing()
+  {
+    $location = 'Winnetka';
+    $swLat    = 34.172684;
+    $swLng    = -118.604794;
+    $neLat    = 34.236144;
+    $neLng    = -118.500938;
+
+    $params = array(
+        'language' => 'en'
+      , 'sensor'   => 'false'
+    );
+    $format   = 'json';
+    $params = array_merge( $params, array( 'bounds' => "$swLat,$swLng|$neLat,$neLng" ) );
+    $params = array_merge( $params, array( 'address' => $location ) );
+
+    $this->service->biasViewport( $swLat, $swLng, $neLat, $neLng );
+
+    $this->assertEquals(
+        "http://maps.googleapis.com/maps/api/geocode/$format?" . http_build_query( $params, '', '&' )
+      , $this->service->generateUrl( $location, $format )
+      , 'URLs did not match'
+    );
+
+    $this->service->removeViewportBias();
+
+    $bounds = new stdClass();
+    $bounds->southwest = new stdClass();
+    $bounds->northeast = new stdClass();
+    $bounds->southwest->lat = $swLat;
+    $bounds->southwest->lng = $swLng;
+    $bounds->northeast->lat = $neLat;
+    $bounds->northeast->lng = $neLng;
+
+    $this->service->biasViewportByBoundsObject( $bounds );
+
+    $this->assertEquals(
+        "http://maps.googleapis.com/maps/api/geocode/$format?" . http_build_query( $params, '', '&' )
+      , $this->service->generateUrl( $location, $format )
+      , 'URLs did not match'
+    );
+  }
+
 }
 
 class ResponseSubclassValid extends GoogleGeocodeResponseV3 {}

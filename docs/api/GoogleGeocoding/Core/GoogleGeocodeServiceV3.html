@@ -127,11 +127,26 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																				
+																																																																																																												
 												<div class="method-definition">
 											<span class="method-result">GoogleGeocodeServiceV3</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
 											(<span class="var-type"><a href="../../GoogleGeocoding/Communicator/GoogleServiceCommunicator.html">GoogleServiceCommunicator</a></span>&nbsp;<span class="var-name">$communicator</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$apiKey</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$defaults</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#biasRegion" title="details" class="method-name">biasRegion</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$region</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#biasViewport" title="details" class="method-name">biasViewport</a>
+											(<span class="var-type">float|string</span>&nbsp;<span class="var-name">$swLat</span>, <span class="var-type">float|string</span>&nbsp;<span class="var-name">$swLng</span>, <span class="var-type">float|string</span>&nbsp;<span class="var-name">$neLat</span>, <span class="var-type">float|string</span>&nbsp;<span class="var-name">$neLng</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#biasViewportByBoundsObject" title="details" class="method-name">biasViewportByBoundsObject</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$bounds</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">string</span>
@@ -152,6 +167,16 @@
 											<span class="method-result"><a href="../../GoogleGeocoding/Core/GoogleGeocodeResponseV3.html">GoogleGeocodeResponseV3</a></span>
 										<a href="#geocode" title="details" class="method-name">geocode</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">self::FORMAT_JSON</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#removeRegionBias" title="details" class="method-name">removeRegionBias</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#removeViewportBias" title="details" class="method-name">removeViewportBias</a>
+										()
 									</div>
 																<div class="method-definition">
 											<span class="method-result"><a href="../../GoogleGeocoding/Core/GoogleGeocodeResponseV3.html">GoogleGeocodeResponseV3</a></span>
@@ -328,11 +353,110 @@
 		
 			
 	</div>
-<a name="methodbuildUrl" id="buildUrl"><!-- --></a>
+<a name="methodbiasRegion" id="biasRegion"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">buildUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a195">195</a></span>)
+		<span class="method-title">biasRegion</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a163">163</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the region bias for all subsequent requests</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../GoogleGeocoding/Core/GoogleGeocodeServiceV3.html#methodsetRequestDefaults">GoogleGeocodeServiceV3::setRequestDefaults()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			biasRegion
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$region</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$region</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbiasViewport" id="biasViewport"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">biasViewport</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a178">178</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the viewport bias for all subsequent requests</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../GoogleGeocoding/Core/GoogleGeocodeServiceV3.html#methodsetRequestDefaults">GoogleGeocodeServiceV3::setRequestDefaults()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			biasViewport
+		</span>
+					(<span class="var-type">float|string</span>&nbsp;<span class="var-name">$swLat</span>, <span class="var-type">float|string</span>&nbsp;<span class="var-name">$swLng</span>, <span class="var-type">float|string</span>&nbsp;<span class="var-name">$neLat</span>, <span class="var-type">float|string</span>&nbsp;<span class="var-name">$neLng</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float|string</span>
+				<span class="var-name">$swLat</span>			</li>
+					<li>
+				<span class="var-type">float|string</span>
+				<span class="var-name">$swLng</span>			</li>
+					<li>
+				<span class="var-type">float|string</span>
+				<span class="var-name">$neLat</span>			</li>
+					<li>
+				<span class="var-type">float|string</span>
+				<span class="var-name">$neLng</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbiasViewportByBoundsObject" id="biasViewportByBoundsObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">biasViewportByBoundsObject</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a195">195</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the viewport bias for all subsequest reqeusts with the bounds object  from another result</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../GoogleGeocoding/Core/GoogleGeocodeServiceV3.html#methodbiasViewport">GoogleGeocodeServiceV3::biasViewport()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			biasViewportByBoundsObject
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$bounds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">stdClass</span>
+				<span class="var-name">$bounds</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbuildUrl" id="buildUrl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">buildUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a260">260</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -361,10 +485,10 @@
 			
 	</div>
 <a name="methodgenerateReverseUrl" id="generateReverseUrl"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">generateReverseUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a180">180</a></span>)
+		<span class="method-title">generateReverseUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a245">245</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -396,10 +520,10 @@
 			
 	</div>
 <a name="methodgenerateUrl" id="generateUrl"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">generateUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a164">164</a></span>)
+		<span class="method-title">generateUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a229">229</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -428,7 +552,7 @@
 			
 	</div>
 <a name="methodgeocode" id="geocode"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">geocode</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a133">133</a></span>)
@@ -459,8 +583,56 @@
 		
 			
 	</div>
-<a name="methodreverseGeocode" id="reverseGeocode"><!-- --></a>
+<a name="methodremoveRegionBias" id="removeRegionBias"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeRegionBias</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove the region biasing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeRegionBias
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodremoveViewportBias" id="removeViewportBias"><!-- --></a>
 <div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeViewportBias</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a216">216</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove the viewport biasing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeViewportBias
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreverseGeocode" id="reverseGeocode"><!-- --></a>
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">reverseGeocode</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a149">149</a></span>)
@@ -495,7 +667,7 @@
 			
 	</div>
 <a name="methodsetRequestDefaults" id="setRequestDefaults"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">setRequestDefaults</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a95">95</a></span>)
@@ -524,7 +696,7 @@
 			
 	</div>
 <a name="methodsetResponseClass" id="setResponseClass"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">setResponseClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeServiceV3.php.html#a107">107</a></span>)
@@ -572,7 +744,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="constDEFAULT_RESPONSE_CLASS" id="DEFAULT_RESPONSE_CLASS"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../../media/images/Variable.png" />
@@ -588,7 +760,7 @@
 	
 </div>
 <a name="constFORMAT_JSON" id="FORMAT_JSON"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../../media/images/Variable.png" />
@@ -604,7 +776,7 @@
 	
 </div>
 <a name="constFORMAT_XML" id="FORMAT_XML"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../../media/images/Variable.png" />
@@ -620,7 +792,7 @@
 	
 </div>
 <a name="constSERVICE_URL" id="SERVICE_URL"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../../media/images/Variable.png" />
@@ -640,7 +812,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 06 Jan 2011 13:40:44 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Mon, 10 Jan 2011 11:59:51 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</div></body>
 </html>

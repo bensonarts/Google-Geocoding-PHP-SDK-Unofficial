@@ -154,6 +154,71 @@ class GoogleGeocodeServiceV3
   }
 
   /**
+   * Set the region bias for all subsequent requests
+   *
+   * @param string $region
+   *
+   * @see setRequestDefaults()
+   */
+  public function biasRegion( $region )
+  {
+    $this->setRequestDefaults( array( 'region' => $region ) );
+  }
+
+  /**
+   * Set the viewport bias for all subsequent requests
+   *
+   * @param float|string $swLat
+   * @param float|string $swLng
+   * @param float|string $neLat
+   * @param float|string $neLng
+   *
+   * @see setRequestDefaults()
+   */
+  public function biasViewport( $swLat, $swLng, $neLat, $neLng )
+  {
+    $swLat = trim( $swLat );
+    $swLng = trim( $swLng );
+    $neLat = trim( $neLat );
+    $neLng = trim( $neLng );
+    $this->setRequestDefaults( array( 'bounds' => "$swLat,$swLng|$neLat,$neLng" ) );
+  }
+
+  /**
+   * Set the viewport bias for all subsequest reqeusts with the bounds object
+   * from another result
+   *
+   * @param stdClass $bounds
+   *
+   * @see biasViewport()
+   */
+  public function biasViewportByBoundsObject( stdClass $bounds )
+  {
+    $this->biasViewport(
+        $bounds->southwest->lat
+      , $bounds->southwest->lng
+      , $bounds->northeast->lat
+      , $bounds->northeast->lng
+    );
+  }
+
+  /**
+   * Remove the region biasing
+   */
+  public function removeRegionBias()
+  {
+    unset( $this->requestDefaults['region'] );
+  }
+
+  /**
+   * Remove the viewport biasing
+   */
+  public function removeViewportBias()
+  {
+    unset( $this->requestDefaults['bounds'] );
+  }
+
+  /**
    * Generate a URL representing the REST call to geocode an address
    *
    * @param string $location
