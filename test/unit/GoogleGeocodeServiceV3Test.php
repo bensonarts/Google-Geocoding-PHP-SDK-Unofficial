@@ -160,4 +160,51 @@ class GoogleGeocodeServiceV3Test extends PHPUnit_Framework_TestCase
       , 'URLs did not match'
     );
   }
+
+  public function testResponseClass()
+  {
+    $this->communicator->seed(
+        $this->service->generateUrl( self::ADDR_JWT_OFFICE, 'json' )
+      , self::RESPONSE_JWT_OFFICE
+    );
+
+    $this->service->setResponseClass( 'ResponseSubclassValid' );
+    $response = $this->service->geocode( self::ADDR_JWT_OFFICE );
+    $this->assertType( 'GoogleGeocodeResponseV3', $response, 'Was not a GoogleGeocodeResponseV3' );
+
+    try {
+      $this->service->setResponseClass( 'ResponseSubclassInvalid' );
+      $response = $this->service->geocode( self::ADDR_JWT_OFFICE );
+      $this->assertType( 'GoogleGeocodeResponseV3', $response, 'Was not a GoogleGeocodeResponseV3' );
+
+      $this->fail( 'GoogleGeocodeException expected' );
+    }
+    catch ( GoogleGeocodeException $e )
+    {
+      $this->assertEquals(
+          "ResponseSubclassInvalid must inherit from GoogleGeocodeResponseV3"
+        , $e->getMessage()
+        , 'Expected error message not received'
+      );
+    }
+
+    try {
+      $this->service->setResponseClass( 'NotDefinedClass' );
+      $response = $this->service->geocode( self::ADDR_JWT_OFFICE );
+      $this->assertType( 'GoogleGeocodeResponseV3', $response, 'Was not a GoogleGeocodeResponseV3' );
+
+      $this->fail( 'GoogleGeocodeException expected' );
+    }
+    catch ( Exception $e )
+    {
+      $this->assertEquals(
+          'Not a valid response class'
+        , $e->getMessage()
+        , 'Expected error message not received'
+      );
+    }
+  }
 }
+
+class ResponseSubclassValid extends GoogleGeocodeResponseV3 {}
+class ResponseSubclassInvalid {}

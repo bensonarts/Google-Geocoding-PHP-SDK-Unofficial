@@ -189,6 +189,11 @@ class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
     return ( in_array( $this->getStatus(), self::$invalidStatuses ) );
   }
 
+  /**
+   * Obatin the types for the result at the current cursor
+   *
+   * @return array
+   */
   public function getTypes()
   {
     return $this->current()->types;
@@ -196,7 +201,7 @@ class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
 
   /**
    * Obtain the name of an address component for the result at the
-   * current index
+   * current cursor
    *
    * @param string $component Which address component to read
    * @param string $size Which name length to return
@@ -214,8 +219,7 @@ class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
   }
 
   /**
-   * Determine if the given type is available in the address components
-   * of the result at the current cursor
+   * Determine if the result at the current cursor is of the given type
    *
    * @param string $type
    *
@@ -315,6 +319,11 @@ class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
     return isset( $this->current()->geometry->bounds );
   }
 
+  /**
+   * Obtain the location type of the result at the current cursor
+   *
+   * @return string
+   */
   public function getLocationType()
   {
     return $this->current()->geometry->location_type;

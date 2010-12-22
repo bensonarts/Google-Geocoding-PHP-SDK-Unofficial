@@ -35,6 +35,7 @@
 class GoogleGeocodeServiceV3
 {
   const SERVICE_URL = 'http://maps.googleapis.com/maps/api/geocode/';
+  const DEFAULT_RESPONSE_CLASS = 'GoogleGeocodeResponseV3';
   const FORMAT_JSON = 'json';
   const FORMAT_XML  = 'xml';
 
@@ -46,7 +47,7 @@ class GoogleGeocodeServiceV3
   protected $apiKey;
 
   /**
-   * How this services will communicate with the API
+   * How this service will communicate with the API
    *
    * @var GoogleServiceCommunicator
    */
@@ -61,6 +62,13 @@ class GoogleGeocodeServiceV3
       'language' => 'en'
     , 'sensor'   => 'false'
   );
+
+  /**
+   * The class to return geocoding requests as
+   *
+   * @var string
+   */
+  protected $responseClass = self::DEFAULT_RESPONSE_CLASS;
 
   /**
    * Constructor
@@ -90,6 +98,31 @@ class GoogleGeocodeServiceV3
   }
 
   /**
+   * Set the response class
+   *
+   * @param string $className Class that inherits from GoogleGeocodeResponseV3
+   *
+   * @throws GoogleGeocodeException
+   */
+  public function setResponseClass( $className )
+  {
+    try {
+      $rc = new ReflectionClass( $className );
+      if ( !$rc->isSubclassOf( self::DEFAULT_RESPONSE_CLASS ) )
+      {
+        throw new GoogleGeocodeException(
+          "$className must inherit from " . self::DEFAULT_RESPONSE_CLASS
+        );
+      }
+    }
+    catch ( ReflectionException $e )
+    {
+      throw new GoogleGeocodeException( 'Not a valid response class' );
+    }
+    $this->responseClass = $className;
+  }
+
+  /**
    * Geocodes the requested location
    *
    * @param string $location Address or location to geocode
@@ -99,7 +132,7 @@ class GoogleGeocodeServiceV3
    */
   public function geocode( $location, $format=self::FORMAT_JSON )
   {
-    return new GoogleGeocodeResponseV3( $this->communicator->requestUrl(
+    return new $this->responseClass( $this->communicator->requestUrl(
       $this->generateUrl( $location, $format )
     ), $format );
   }
@@ -115,7 +148,7 @@ class GoogleGeocodeServiceV3
    */
   public function reverseGeocode( $lat, $lng, $format = self::FORMAT_JSON )
   {
-    return new GoogleGeocodeResponseV3( $this->communicator->requestUrl(
+    return new $this->responseClass( $this->communicator->requestUrl(
       $this->generateReverseUrl( $lat, $lng, $format )
     ), $format );
   }
