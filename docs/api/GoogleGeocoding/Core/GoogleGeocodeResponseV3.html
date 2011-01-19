@@ -26,7 +26,7 @@
                 <p class="implements">
             Implements interfaces:
             <ul>
-                <li>ArrayAccess (internal interface)</li><li>Iterator (internal interface)</li><li>Countable (internal interface)</li>            </ul>
+                <li>Iterator (internal interface)</li><li>Countable (internal interface)</li>            </ul>
         </p>
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">A response class for Google's Geocoding API (V3)</p>
@@ -282,7 +282,7 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																																																																																																																												
+																																																																																																																																																																																												
 												<div class="method-definition">
 											<span class="method-result">boolean</span>
 										<a href="#assertType" title="details" class="method-name">assertType</a>
@@ -294,7 +294,7 @@
 										()
 									</div>
 																<div class="method-definition">
-											<span class="method-result">stdClass</span>
+											<span class="method-result">stdClass|null</span>
 										<a href="#current" title="details" class="method-name">current</a>
 										()
 									</div>
@@ -382,26 +382,6 @@
 											<span class="method-result">void</span>
 										<a href="#next" title="details" class="method-name">next</a>
 										()
-									</div>
-																<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#offsetExists" title="details" class="method-name">offsetExists</a>
-											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">stdClass|null</span>
-										<a href="#offsetGet" title="details" class="method-name">offsetGet</a>
-											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#offsetSet" title="details" class="method-name">offsetSet</a>
-											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
-									</div>
-																<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#offsetUnset" title="details" class="method-name">offsetUnset</a>
-											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
@@ -576,7 +556,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">count</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a456">456</a></span>)
+		<span class="method-title">count</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a403">403</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -606,7 +586,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">current</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a405">405</a></span>)
+		<span class="method-title">current</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a349">349</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -617,7 +597,7 @@
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">stdClass</span>
+		<span class="method-result">stdClass|null</span>
 		<span class="method-name">
 			current
 		</span>
@@ -1012,7 +992,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">key</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a417">417</a></span>)
+		<span class="method-title">key</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a364">364</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1042,7 +1022,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">next</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a427">427</a></span>)
+		<span class="method-title">next</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a374">374</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1068,154 +1048,11 @@
 					</dl>
 			
 	</div>
-<a name="methodoffsetExists" id="offsetExists"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">offsetExists</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a354">354</a></span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Determine if a result exists at the given index</p>
-	<ul class="tags">
-				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			offsetExists
-		</span>
-					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">integer</span>
-				<span class="var-name">$offset</span>			</li>
-				</ul>
-		
-				<hr class="separator" />
-		<div class="notes">Implementation of:</div>
-			<dl>
-			<dt>ArrayAccess::offsetExists</dt>
-					</dl>
-			
-	</div>
-<a name="methodoffsetGet" id="offsetGet"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">offsetGet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a380">380</a></span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Obtain the result at the given index</p>
-	<ul class="tags">
-				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">stdClass|null</span>
-		<span class="method-name">
-			offsetGet
-		</span>
-					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">integer</span>
-				<span class="var-name">$offset</span>			</li>
-				</ul>
-		
-				<hr class="separator" />
-		<div class="notes">Implementation of:</div>
-			<dl>
-			<dt>ArrayAccess::offsetGet</dt>
-					</dl>
-			
-	</div>
-<a name="methodoffsetSet" id="offsetSet"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">offsetSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a340">340</a></span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Overwrite the result at the given index</p>
-	<ul class="tags">
-				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			offsetSet
-		</span>
-					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">integer</span>
-				<span class="var-name">$offset</span>			</li>
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$value</span>			</li>
-				</ul>
-		
-				<hr class="separator" />
-		<div class="notes">Implementation of:</div>
-			<dl>
-			<dt>ArrayAccess::offsetSet</dt>
-					</dl>
-			
-	</div>
-<a name="methodoffsetUnset" id="offsetUnset"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">offsetUnset</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a366">366</a></span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Delete the result at the given index</p>
-	<ul class="tags">
-				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/class.arrayaccess.php">http://www.php.net/manual/en/class.arrayaccess.php</a></li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			offsetUnset
-		</span>
-					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">integer</span>
-				<span class="var-name">$offset</span>			</li>
-				</ul>
-		
-				<hr class="separator" />
-		<div class="notes">Implementation of:</div>
-			<dl>
-			<dt>ArrayAccess::offsetUnset</dt>
-					</dl>
-			
-	</div>
 <a name="methodrewind" id="rewind"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">rewind</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a393">393</a></span>)
+		<span class="method-title">rewind</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a337">337</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1278,7 +1115,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">valid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a439">439</a></span>)
+		<span class="method-title">valid</span> (line <span class="line-number"><a href="../../__filesource/fsource_GoogleGeocoding_Core_GoogleGeocodeResponseV3.php.html#a386">386</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1871,7 +1708,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 10 Jan 2011 11:59:50 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+		Documentation generated on Wed, 19 Jan 2011 15:17:51 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
 	</p>
 	</div></body>
 </html>

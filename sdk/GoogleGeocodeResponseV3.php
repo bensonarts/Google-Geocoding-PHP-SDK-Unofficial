@@ -32,7 +32,7 @@
  *
  * @see http://code.google.com/apis/maps/documentation/geocoding/
  */
-class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
+class GoogleGeocodeResponseV3 implements Iterator, Countable
 {
   // Statuses
   const STATUS_OK               = "OK";
@@ -330,62 +330,6 @@ class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
   }
 
   /**
-   * Overwrite the result at the given index
-   *
-   * @param integer $offset
-   * @param mixed $value
-   *
-   * @see http://www.php.net/manual/en/class.arrayaccess.php
-   */
-  public function offsetSet( $offset, $value )
-  {
-    $this->response->results[$offset] = $value;
-  }
-
-  /**
-   * Determine if a result exists at the given index
-   *
-   * @param integer $offset
-   *
-   * @return boolean
-   *
-   * @see http://www.php.net/manual/en/class.arrayaccess.php
-   */
-  public function offsetExists( $offset )
-  {
-    return isset( $this->response->results[$offset] );
-  }
-
-  /**
-   * Delete the result at the given index
-   *
-   * @param integer $offset
-   *
-   * @see http://www.php.net/manual/en/class.arrayaccess.php
-   */
-  public function offsetUnset( $offset )
-  {
-    unset( $this->response->results[$offset] );
-  }
-
-  /**
-   * Obtain the result at the given index
-   *
-   * @param integer $offset
-   *
-   * @return stdClass|null
-   *
-   * @see http://www.php.net/manual/en/class.arrayaccess.php
-   */
-  public function offsetGet( $offset )
-  {
-    return isset( $this->response->results[$offset] )
-      ? $this->response->results[$offset]
-      : null
-    ;
-  }
-
-  /**
    * Reset the cursor
    *
    * @see http://www.php.net/manual/en/class.iterator.php
@@ -398,13 +342,16 @@ class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
   /**
    * Obtain the result at the current cursor
    *
-   * @return stdClass
+   * @return stdClass|null
    *
    * @see http://www.php.net/manual/en/class.iterator.php
    */
   public function current()
   {
-    return $this[$this->cursor];
+    return isset( $this->response->results[$this->cursor] )
+      ? $this->response->results[$this->cursor]
+      : null
+    ;
   }
 
   /**
@@ -438,7 +385,7 @@ class GoogleGeocodeResponseV3 implements ArrayAccess, Iterator, Countable
    */
   public function valid()
   {
-    if ( isset( $this[$this->cursor] ) )
+    if ( isset( $this->response->results[$this->cursor] ) )
     {
       return true;
     }
