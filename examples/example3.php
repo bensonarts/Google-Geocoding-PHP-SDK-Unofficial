@@ -17,13 +17,17 @@ $response = $service->reverseGeocode( 34.1346702, -118.4389877 );
 
 while ( $response->valid() )
 {
+  // Address component type we're checking for
+  $component = GoogleGeocodeResponseV3::ACT_LOCALITY;
+
   // Is it a city-level result?
-  if ( $response->assertType( GoogleGeocodeResponseV3::ACT_LOCALITY ) )
+  if ( $response->assertType( $component ) )
   {
     // Get the city name
-    echo $response->getAddressComponentName(
-      GoogleGeocodeResponseV3::ACT_LOCALITY
-    );
+    echo $response->getAddressComponentName( $component );
+    break;
   }
   $response->next();
 }
+
+echo '<hr>', highlight_file( __FILE__, 1 );

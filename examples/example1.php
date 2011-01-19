@@ -22,3 +22,5 @@ if ( $response->isValid() && $response->hasResults() )
 } else {
   echo 'Invalid Response';
 }
+
+echo '<hr>', highlight_file( __FILE__, 1 );

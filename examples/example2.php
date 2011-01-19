@@ -19,7 +19,7 @@ $response = $service->geocode( 'Springfield' );
 // Remember, GoogleGeocodeResponseV3 implements the Countable interface
 if ( count( $response ) > 1 )
 {
-  echo "The city of Springfield found in: <br>";
+  echo "The city of Springfield was found in: <br>";
   while ( $response->valid() )
   {
     // Get the State name
@@ -32,3 +32,5 @@ if ( count( $response ) > 1 )
 } else {
   echo "Only one or no results";
 }
+
+echo '<hr>', highlight_file( __FILE__, 1 );
